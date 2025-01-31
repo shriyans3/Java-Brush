@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- bean definitions here -->
+    <bean id="Edho" class="org.example.Edho">
+<!--        <property name="x" value="21"></property>-->
+<!--        <property name="avi" ref="avi1"></property>-->
+
+        <!-- constructor injection-->
+<!--        <constructor-arg index = '1' ref = "avi1"/>-->
+<!--        <constructor-arg index = '0' value="21"/>-->
+
+<!--        <constructor-arg name = 'btl' ref = "btle"/>-->
+        <constructor-arg name = 'x' value="21"/>
+        <constructor-arg name = 'b' ref="bot"/>
+    </bean>
+
+    <bean id="avi1" class="org.example.Avtundhi" scope="prototype">
+    </bean>
+
+    <bean id="bot" class="org.example.Glass" scope="prototype" primary="true">
+    </bean>
+
+    <bean id="b1" class="org.example.Copper" lazy-init="true">
+    </bean>
+
+
+</beans>
